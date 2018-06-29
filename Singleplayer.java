@@ -3,6 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+
+//test comment
 public class Singleplayer implements ActionListener {		//implementieren, um Aktionen per Mausklick festzulegen
 	
 	public static int [] counter = {5,5,5,5,5,5,5};		//Zähler für jede Spalte
