@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import javax.swing.*;
 
 public class Spielfeld extends JPanel{  //Standard Panel
@@ -13,7 +12,7 @@ static final long serialVersionUID = 1; //Version Nummer
 	private JLabel Text2;
 	
 	public static JButton [][] feld = new JButton [6][7];	//Array für die Spielfelder vom Typ JButton
-	public static JMenuItem [] menufeld = new JMenuItem[4]; //Array für die MenüItems
+	public static JMenuItem [] menufeld = new JMenuItem[5]; //Array für die MenüItems
 			
     public Spielfeld() {
     	
@@ -29,6 +28,8 @@ static final long serialVersionUID = 1; //Version Nummer
         gameMenu.add (menufeld[0]);
         menufeld[1] = new JMenuItem ("Exit");
         gameMenu.add (menufeld[1]);
+        menufeld[4] = new JMenuItem ("Spielerprofile");
+        gameMenu.add (menufeld[4]);
         JMenu optionMenu = new JMenu ("Option");
         menufeld[2] = new JMenuItem ("Singleplayer");
         optionMenu.add (menufeld[2]);
@@ -59,6 +60,7 @@ static final long serialVersionUID = 1; //Version Nummer
     	//Menüfelder einfügen
     	gameMenu.add(menufeld[0]);
     	gameMenu.add(menufeld[1]);
+    	gameMenu.add(menufeld[4]);
     	optionMenu.add(menufeld[2]);
     	optionMenu.add(menufeld[3]);
     	

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//sada
+
 public class Singleplayer implements ActionListener {		//implementieren, um Aktionen per Mausklick festzulegen
 	
 	public static int [] counter = {5,5,5,5,5,5,5};		//Zähler für jede Spalte
@@ -18,7 +18,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
     		}
     	}
 		
-		for(int s=0;s<4;s++) {									
+		for(int s=0;s<5;s++) {									
 			Spielfeld.menufeld[s].addActionListener(this);		//hinzufügen der JMenuItems zu ActionListener, um diese ansprechen zu können
 		}
 	}
@@ -56,9 +56,12 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 			 Singleplayer.main(null);
 		 }
 		 
-		 if(e.getSource()==Spielfeld.menufeld[2]) {			//für JMenuItem "Multiplayer"
+		 if(e.getSource()==Spielfeld.menufeld[3]) {			//für JMenuItem "Multiplayer"
 			 frame1.dispose();
 			 Multiplayer.main(null);
+		 }
+		 if(e.getSource()==Spielfeld.menufeld[4]) {			//für JMenuItem "Spielerprofile"
+			 SpielerprofilLayout.main(null);
 		 }
 		 
 		 for(int i=0;i<7;i++) {										//wenn JButton gedrückt, ändere counter
