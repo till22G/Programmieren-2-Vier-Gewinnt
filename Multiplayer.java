@@ -11,6 +11,12 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	public int gewinncounter = 0;						//Zähler für Steine in Reihe
 	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kästchen
 	
+	//Strings für Bilder
+	String URLLeeresFeld = "C:\\Users\\User\\Desktop\\Programmieren-2-Vier-Gewinnt\\LeeresFeld.png";
+	String URLGelbesFeld = "/Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
+	String URLRotesFeld = "/Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
+	
+	
 	public Multiplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
@@ -38,7 +44,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 			 changer=1;
 			 for (int x=0;x<6;x++) {
 		    		for(int y=0;y<7;y++) {
-		    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+		    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 		    			counterfeld[x][y]=0;
 		    		}
 		    	}
@@ -69,7 +75,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedrückt, ändere changer
 					 if (counter[i]>-1) {
 						 if (changer == 1) {
-							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon("/4gewinnt/src/Bilder/RotesFeld.png"));
+							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLRotesFeld));
 							 changer = 2;
 							 counterfeld[counter[i]][i] = 1;		//wird zum überprüfen gesetzt
 							 counter[i]--;
@@ -90,7 +96,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -122,7 +128,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -154,7 +160,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -186,7 +192,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -218,7 +224,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -250,7 +256,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -268,7 +274,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 							 
 						 }
 						 else {
-							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon("/4gewinnt/src/Bilder/GelbesFeld.png"));;
+							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLGelbesFeld));;
 							 changer = 1;
 							 counterfeld[counter[i]][i] = 2;	 
 							 counter[i]--;
@@ -289,7 +295,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -321,7 +327,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -353,7 +359,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -385,7 +391,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -417,7 +423,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -449,7 +455,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("/4gewinnt/src/Bilder/LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
