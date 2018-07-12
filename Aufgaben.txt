@@ -1,0 +1,9 @@
+Aufgaben.
+1. Speichern und Laden des Spielstands
+2. Random KI
+3. Spielerprofile anlegen (beliebig viele), verknüpfen und merken
+4. Spielhistorie (Siege, Niederlage, Durschnittl. Züge)
+5. Scoreboard (meiste Siege, etc.)
+6. Exception Classes
+7. Tests
+8. Readme mit Installation
