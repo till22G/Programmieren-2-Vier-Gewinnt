@@ -17,6 +17,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	String URLRotesFeld = "/Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
 	
 	
+	
 	public Multiplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
