@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,9 +11,9 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kästchen
 	
 	//Strings für Bilder
-	String URLLeeresFeld = "C:\\Users\\User\\Desktop\\Programmieren-2-Vier-Gewinnt\\LeeresFeld.png";
-	String URLGelbesFeld = "/Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
-	String URLRotesFeld = "/Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
+	String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
+	String URLGelbesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
+	String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
 	
 	
 	

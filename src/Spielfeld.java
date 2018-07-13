@@ -74,7 +74,7 @@ static final long serialVersionUID = 1; //Version Nummer
     	for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
     			
-    			feld[i][j].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+    			feld[i][j].setIcon(new ImageIcon("../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png"));
     		}
     	}
 
