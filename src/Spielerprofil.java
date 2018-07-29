@@ -5,6 +5,7 @@ public class Spielerprofil {
 	public int anzahlSpiele;
 	public int gewonneneSpiele;
 	public int verloreneSpiele;
+
 	
 	public Spielerprofil(String spielername, int anzSpiele, int gewSpiele, int verSpiele) {
 		

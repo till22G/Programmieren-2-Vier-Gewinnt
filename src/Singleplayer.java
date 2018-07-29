@@ -10,6 +10,11 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 	public int [][] counterfeld = new int [6][7];		//Zähler der Spielsteine 1 für rot, 2 für gelb
 	public int gewinncounter = 0;						//Zähler für Steine in Reihe
 	private static JFrame frame1 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kästchen
+
+	//Strings für Bilder
+		String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
+		String URLGelbesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
+		String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
 	
 	public Singleplayer (){									
 		for (int i=0;i<6;i++) {
@@ -38,7 +43,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 			 changer=1;
 			 for (int x=0;x<6;x++) {
 		    		for(int y=0;y<7;y++) {
-		    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+		    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 		    			counterfeld[x][y]=0;
 		    		}
 		    	}
@@ -69,7 +74,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedrückt, ändere changer
 					 if (counter[i]>-1) {
 						 if (changer == 1) {
-							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\RotesFeld.png"));
+							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLRotesFeld));
 							 changer = 2;
 							 counterfeld[counter[i]][i] = 1;		//wird zum überprüfen gesetzt
 							 counter[i]--;
@@ -90,7 +95,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -122,7 +127,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -154,7 +159,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -186,7 +191,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -218,7 +223,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -250,7 +255,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -268,7 +273,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 							 
 						 }
 						 else {
-							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\GelbesFeld.png"));;
+							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLGelbesFeld));;
 							 changer = 1;
 							 counterfeld[counter[i]][i] = 2;	 
 							 counter[i]--;
@@ -289,7 +294,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -321,7 +326,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 												 changer=1;
 												 for (int x=0;x<6;x++) {
 											    		for(int y=0;y<7;y++) {
-											    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+											    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 											    			counterfeld[x][y]=0;
 											    		}
 											    	}
@@ -353,7 +358,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -385,7 +390,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -417,7 +422,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
@@ -449,7 +454,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 													 changer=1;
 													 for (int x=0;x<6;x++) {
 												    		for(int y=0;y<7;y++) {
-												    			Spielfeld.feld[x][y].setIcon(new ImageIcon("C:\\Users\\User\\Desktop\\4Gewinnt\\LeeresFeld.png"));
+												    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
 												    			counterfeld[x][y]=0;
 												    		}
 												    	}
