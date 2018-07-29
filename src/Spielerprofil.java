@@ -37,7 +37,7 @@ public class Spielerprofil {
 	
 	
 	
-	//etter und Setter für Spielerprofil
+	//Getter und Setter für Spielerprofil
 
 	public String getName() {
 		return name;
