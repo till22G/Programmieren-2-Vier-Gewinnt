@@ -33,9 +33,6 @@ public class Spielerprofil {
 		System.out.println("Die durchschnittliche Anzahl an Zügen ist:" + durchschnittlicheZüge);
 	}
 	
-	public static void main (String[]args) {
-		
-	}
 
 	public String getName() {
 		return name;
