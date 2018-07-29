@@ -16,7 +16,12 @@ public class Spielerprofil {
 	}
 	
 	public Spielerprofil(String spielername) {
-		name = spielername;
+		this.name = spielername;
+		this.anzahlSpiele = 0;
+		this.gewonneneSpiele = 0;
+		this.verloreneSpiele = 0;
+		this.durchschnittlicheZüge = 0;
+		
 	}
 	
 	public void print() {
