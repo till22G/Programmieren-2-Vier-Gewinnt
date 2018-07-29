@@ -15,6 +15,8 @@ public class Spielerprofil {
 		verloreneSpiele = verSpiele;
 	}
 	
+	
+	//Konstruktor initialisiert Spieler mit gegebenem namen und noch keinen Spielen
 	public Spielerprofil(String spielername) {
 		this.name = spielername;
 		this.anzahlSpiele = 0;
@@ -24,8 +26,8 @@ public class Spielerprofil {
 		
 	}
 	
+	//print Methode gibt Informationen zum Spielerprofil auf der Konsole aus
 	public void print() {
-		
 		System.out.println("Spielername: " + name);
 		System.out.println("Anzahl Spiele: " + anzahlSpiele);
 		System.out.println("Gewonnene Spiele: " + gewonneneSpiele);
@@ -33,6 +35,9 @@ public class Spielerprofil {
 		System.out.println("Die durchschnittliche Anzahl an Zügen ist:" + durchschnittlicheZüge);
 	}
 	
+	
+	
+	//etter und Setter für Spielerprofil
 
 	public String getName() {
 		return name;
