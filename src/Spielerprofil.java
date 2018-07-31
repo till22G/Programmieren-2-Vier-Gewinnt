@@ -8,7 +8,6 @@ public class Spielerprofil {
 	public int durchschnittlicheZüge;
 	
 	public Spielerprofil(String spielername, int anzSpiele, int gewSpiele, int verSpiele) {
-		
 		name = spielername;
 		anzahlSpiele = anzSpiele;
 		gewonneneSpiele = gewSpiele;
@@ -37,7 +36,9 @@ public class Spielerprofil {
 	
 	
 	
-	//Getter und Setter für Spielerprofil
+	
+	
+	//Getter and setter for Spielerprofil
 
 	public String getName() {
 		return name;
@@ -78,7 +79,5 @@ public class Spielerprofil {
 	public void setDurchschnittlicheZüge(int durchschnittlicheZüge) {
 		this.durchschnittlicheZüge = durchschnittlicheZüge;
 	}
-	
-	
-	
+		
 }

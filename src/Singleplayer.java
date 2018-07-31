@@ -11,11 +11,18 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 	public int gewinncounter = 0;						//Zähler für Steine in Reihe
 	private static JFrame frame1 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kästchen
 
-	//Strings für Bilder
+		
+	//Strings für Icons
+		//Leeres Feld
 		String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
+		//Gelbes Feld
 		String URLGelbesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
+		//Rotes Feld
 		String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
 	
+		
+	
+	//Konstruktor für Singelplayer
 	public Singleplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
@@ -28,6 +35,11 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 		}
 	}
 	
+	
+	
+	//main Methode 
+	//
+	//
 	public static void main (String[] args) {
         frame1.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);		//wenn x gedrückt Spiel beenden
         frame1.getContentPane().add (new Spielfeld());				//erstellen des Spielfeldes
@@ -36,6 +48,10 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
         frame1.setResizable(false);
         Singleplayer vierGewinnt = new Singleplayer();
 	}
+	
+	
+	
+
 	
 	 public void actionPerformed (ActionEvent e){	
 		 if(e.getSource()==Spielfeld.menufeld[0]) {			//für JMenuItem "Neu"
@@ -51,6 +67,8 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 				 counter[m]=5;
 			 }
 		 }
+		 
+		 
 		 
 		 if(e.getSource()==Spielfeld.menufeld[1]) {			//für JMenuItem "Exit"
 			 System.exit(0);
@@ -68,6 +86,9 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 		 if(e.getSource()==Spielfeld.menufeld[4]) {			//für JMenuItem "Spielerprofile"
 			 SpielerprofilLayout.main(null);
 		 }
+		 
+		 
+		 
 		 
 		 for(int i=0;i<7;i++) {										//wenn JButton gedrückt, ändere counter
 			 for(int j=0;j<6;j++) {									//wenn JButton gedrückt, ändere Image
