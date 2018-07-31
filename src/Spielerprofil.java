@@ -27,11 +27,11 @@ public class Spielerprofil {
 	
 	//print Methode gibt Informationen zum Spielerprofil auf der Konsole aus
 	public void print() {
-		System.out.println("Spielername: " + name);
-		System.out.println("Anzahl Spiele: " + anzahlSpiele);
-		System.out.println("Gewonnene Spiele: " + gewonneneSpiele);
-		System.out.println("Verlorene Spiele: " + verloreneSpiele);
-		System.out.println("Die durchschnittliche Anzahl an Zuegen ist:" + durchschnittlicheZuege);
+		System.out.println("Player: " + name);
+		System.out.println("Games: " + anzahlSpiele);
+		System.out.println("Wins: " + gewonneneSpiele);
+		System.out.println("Losses: " + verloreneSpiele);
+		System.out.println("Average moves:" + durchschnittlicheZuege);
 	}
 	
 	

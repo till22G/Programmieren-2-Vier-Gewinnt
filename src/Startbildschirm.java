@@ -9,7 +9,7 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	
 	    public JButton multiplayer;
 	    public JButton singleplayer;
-	    private static JFrame frame = new JFrame ("Startbildschirm");
+	    private static JFrame frame = new JFrame ("Start");
 
 	    public Startbildschirm() {
 	    	

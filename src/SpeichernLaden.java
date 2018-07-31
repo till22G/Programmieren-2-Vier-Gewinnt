@@ -18,8 +18,8 @@ public class SpeichernLaden extends JPanel implements ActionListener {
 
     public SpeichernLaden() {
         //construct components
-        speichern = new JButton ("Speichern");
-        laden = new JButton ("Laden");
+        speichern = new JButton ("Save");
+        laden = new JButton ("Load");
         eingabe = new JTextField (5);
         eingegebenes = new JLabel (".");
 
@@ -45,7 +45,7 @@ public class SpeichernLaden extends JPanel implements ActionListener {
 
 
     public static void main (String[] args) {
-        JFrame frame = new JFrame ("Speichern/Laden");
+        JFrame frame = new JFrame ("Save/ Load");
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add (new SpeichernLaden());
         frame.pack();

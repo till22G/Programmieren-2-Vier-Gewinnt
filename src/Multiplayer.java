@@ -8,7 +8,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	public int changer =1;								//flag fuer Spielerwechsel
 	public int [][] counterfeld = new int [6][7];		//Zaehler der Spielsteine 1 fuer rot, 2 fuer gelb
 	public int gewinncounter = 0;						//Zaehler fuer Steine in Reihe
-	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kaestchen
+	private static JFrame frame2 = new JFrame ("Connect 4");		//erstellen des Windows Kaestchen
 	
 	//Strings fuer Bilder
 	String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
@@ -87,7 +87,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -119,7 +119,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -151,7 +151,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -183,7 +183,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -215,7 +215,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -247,7 +247,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -286,7 +286,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -318,7 +318,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 										 gewinncounter++;
 										 if(gewinncounter==4) {
 											 System.out.println("vorbei");
-											 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+											 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 											 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 												 System.exit(0);
 											 }
@@ -350,7 +350,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 gewinncounter++;
 											 if(gewinncounter==4) {
 												 System.out.println("vorbei");
-												 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+												 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 												 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 													 System.exit(0);
 												 }
@@ -382,7 +382,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 gewinncounter++;
 											 if(gewinncounter==4) {
 												 System.out.println("vorbei");
-												 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+												 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 												 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 													 System.exit(0);
 												 }
@@ -414,7 +414,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 gewinncounter++;
 											 if(gewinncounter==4) {
 												 System.out.println("vorbei");
-												 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+												 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 												 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 													 System.exit(0);
 												 }
@@ -446,7 +446,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 gewinncounter++;
 											 if(gewinncounter==4) {
 												 System.out.println("vorbei");
-												 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Spiel vorbei", JOptionPane.YES_NO_OPTION);
+												 int result = JOptionPane.showConfirmDialog(null, "Again?", "Game over", JOptionPane.YES_NO_OPTION);
 												 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
 													 System.exit(0);
 												 }
@@ -475,8 +475,8 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 						 
 					 }
 					 else {																	//wenn counter <0, gib aus "nicht moeglich"
-					 System.out.println("Nicht moeglich");
-					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht moeglich");
+					 System.out.println("invalid");
+					 JOptionPane.showMessageDialog(null, "invalid move");
 					 }
 		 
 				 }
