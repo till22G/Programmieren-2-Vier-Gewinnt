@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TSpielfeld {
 
 	@Test
-	public void test() {
+	public void test_Spielfeld() {
 		fail("Not yet implemented");
 	}
 

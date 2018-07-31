@@ -7,8 +7,11 @@ import org.junit.Test;
 public class TSpielerprofilLayout {
 
 	@Test
-	public void test() {
+	public void test_Spielerprofillayout() {
 		fail("Not yet implemented");
+	}
+	public void test_actionPerformed() {
+		
 	}
 
 }

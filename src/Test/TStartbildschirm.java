@@ -7,8 +7,13 @@ import org.junit.Test;
 public class TStartbildschirm {
 
 	@Test
-	public void test() {
+	public void test_startbildschirm() {
 		fail("Not yet implemented");
 	}
+	public void test_actionPerformed() {
+		
+	}
+	
+	
 
 }
