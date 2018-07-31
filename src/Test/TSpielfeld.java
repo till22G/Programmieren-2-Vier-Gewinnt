@@ -3,9 +3,8 @@ package Test;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.*;
 
-public class Tests {
+public class TSpielfeld {
 
 	@Test
 	public void test() {
