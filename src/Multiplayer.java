@@ -10,7 +10,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	public int gewinncounter = 0;						//Zaehler fuer Steine in Reihe
 	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kaestchen
 	
-	//Strings f�r Bilder
+	//Strings fuer Bilder
 	String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
 	String URLGelbesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
 	String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
@@ -70,9 +70,9 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 			 SpielerprofilLayout.main(null);
 		 }
 		 
-		 for(int i=0;i<7;i++) {										//wenn JButton gedr�ckt, �ndere counter
-			 for(int j=0;j<6;j++) {									//wenn JButton gedr�ckt, �ndere Image
-				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedr�ckt, �ndere changer
+		 for(int i=0;i<7;i++) {										//wenn JButton gedrueckt, aedere counter
+			 for(int j=0;j<6;j++) {									//wenn JButton gedrueckt, aedere Image
+				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedrueckt, aedere changer
 					 if (counter[i]>-1) {
 						 if (changer == 1) {
 							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLRotesFeld));
@@ -475,8 +475,8 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 						 
 					 }
 					 else {																	//wenn counter <0, gib aus "nicht moeglich"
-					 System.out.println("Nicht m�glich");
-					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht m�glich");
+					 System.out.println("Nicht moeglich");
+					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht moeglich");
 					 }
 		 
 				 }
