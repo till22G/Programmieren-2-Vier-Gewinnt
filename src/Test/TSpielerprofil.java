@@ -7,8 +7,7 @@ import org.junit.Test;
 public class TSpielerprofil {
 
 	@Test
-	public void test() {
+	public void test_Spielerprofil() {
 		fail("Not yet implemented");
 	}
-
 }

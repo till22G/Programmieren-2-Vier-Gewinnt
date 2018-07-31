@@ -7,8 +7,11 @@ import org.junit.Test;
 public class TSpeichernLaden {
 
 	@Test
-	public void test() {
+	public void test_SpeicherLaden() {
 		fail("Not yet implemented");
+	}
+	public void test_actionPerformed() {
+		
 	}
 
 }
