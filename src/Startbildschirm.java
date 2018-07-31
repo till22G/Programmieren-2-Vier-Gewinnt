@@ -21,11 +21,11 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	        setPreferredSize (new Dimension (300, 200));
 	        setLayout (null);
 
-	        //hinzufügen der Buttons
+	        //hinzufuegen der Buttons
 	        add (multiplayer);
 	        add (singleplayer);
 
-	        //Größe und Position der >Buttons
+	        //Groesse und Position der >Buttons
 	        multiplayer.setBounds (150, 0, 150, 200);
 	        singleplayer.setBounds (0, 0, 150, 200);
 	        
