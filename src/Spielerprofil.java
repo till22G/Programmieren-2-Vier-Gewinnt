@@ -5,7 +5,7 @@ public class Spielerprofil {
 	public int anzahlSpiele;
 	public int gewonneneSpiele;
 	public int verloreneSpiele;
-	public int durchschnittlicheZüge;
+	public int durchschnittlicheZuege;
 	
 	public Spielerprofil(String spielername, int anzSpiele, int gewSpiele, int verSpiele) {
 		name = spielername;
@@ -21,7 +21,7 @@ public class Spielerprofil {
 		this.anzahlSpiele = 0;
 		this.gewonneneSpiele = 0;
 		this.verloreneSpiele = 0;
-		this.durchschnittlicheZüge = 0;
+		this.durchschnittlicheZuege = 0;
 		
 	}
 	
@@ -31,7 +31,7 @@ public class Spielerprofil {
 		System.out.println("Anzahl Spiele: " + anzahlSpiele);
 		System.out.println("Gewonnene Spiele: " + gewonneneSpiele);
 		System.out.println("Verlorene Spiele: " + verloreneSpiele);
-		System.out.println("Die durchschnittliche Anzahl an Zügen ist:" + durchschnittlicheZüge);
+		System.out.println("Die durchschnittliche Anzahl an Zuegen ist:" + durchschnittlicheZuege);
 	}
 	
 	
@@ -72,12 +72,12 @@ public class Spielerprofil {
 		this.verloreneSpiele = verloreneSpiele;
 	}
 
-	public int getDurchschnittlicheZüge() {
-		return durchschnittlicheZüge;
+	public int getDurchschnittlicheZuege() {
+		return durchschnittlicheZuege;
 	}
 
-	public void setDurchschnittlicheZüge(int durchschnittlicheZüge) {
-		this.durchschnittlicheZüge = durchschnittlicheZüge;
+	public void setDurchschnittlicheZuege(int durchschnittlicheZuege) {
+		this.durchschnittlicheZuege = durchschnittlicheZuege;
 	}
 		
 }
