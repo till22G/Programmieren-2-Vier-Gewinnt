@@ -46,11 +46,11 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	    public void actionPerformed (ActionEvent e){
 	    	if(e.getSource()==multiplayer) {
 	    		frame.dispose();
-	    		Multiplayer.main(null);
+	    		Singleplayer.main(null);
 	    	}
 	    	if(e.getSource()==singleplayer) {
 	    		frame.dispose();
-	    		Multiplayer.main(null);
+	    		Singleplayer.main(null);
 	    	}
 	    }
 	

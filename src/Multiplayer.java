@@ -64,7 +64,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 		 
 		 if(e.getSource()==Spielfeld.menufeld[3]) {			//für JMenuItem "Multiplayer"
 			 frame2.dispose();
-			 Multiplayer.main(null);
+			 Singleplayer.main(null);
 		 }
 		 if(e.getSource()==Spielfeld.menufeld[4]) {			//für JMenuItem "Spielerprofile"
 			 SpielerprofilLayout.main(null);
@@ -106,7 +106,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[a][b] == 2) {
+									 else if(counterfeld[a][b] == 2 || counterfeld[a][b] == 0) {
 										 gewinncounter=0;
 									 }
 								 }
@@ -138,7 +138,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[b][a] == 2) {
+									 else if(counterfeld[b][a] == 2 || counterfeld[b][a] == 0) {
 										 gewinncounter=0;
 									 }
 								 }
@@ -170,7 +170,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[c][d] == 2) {
+									 else if(counterfeld[c][d] == 2 || counterfeld[c][d] == 0) {
 										 gewinncounter=0;
 									 }
 								}
@@ -202,7 +202,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[c][d] == 2) {
+									 else if(counterfeld[c][d] == 2 || counterfeld[c][d] == 0) {
 										 gewinncounter=0;
 									 }
 								}
@@ -234,7 +234,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[c][d] == 2) {
+									 else if(counterfeld[c][d] == 2 || counterfeld[c][d] == 0) {
 										 gewinncounter=0;
 									 }
 								}
@@ -266,7 +266,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[c][d] == 2) {
+									 else if(counterfeld[c][d] == 2 || counterfeld[c][d] == 0) {
 										 gewinncounter=0;
 									 }
 								}
@@ -305,7 +305,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[a][b] == 1) {
+									 else if(counterfeld[a][b] == 1 || counterfeld[a][b] == 0) {
 										 gewinncounter=0;
 									 }
 								 }
@@ -337,7 +337,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 											 }
 										 }
 									 }
-									 else if(counterfeld[b][a] == 1) {
+									 else if(counterfeld[b][a] == 1 || counterfeld[b][a] == 0) {
 										 gewinncounter=0;
 									 }
 								 }
@@ -369,7 +369,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 }
 											 }
 										 }
-										 else if(counterfeld[c][d] == 1) {
+										 else if(counterfeld[c][d] == 1 || counterfeld[c][d] == 0) {
 											 gewinncounter=0;
 										 }
 									}
@@ -401,7 +401,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 }
 											 }
 										 }
-										 else if(counterfeld[c][d] == 1) {
+										 else if(counterfeld[c][d] == 1 || counterfeld[c][d] == 0) {
 											 gewinncounter=0;
 										 }
 									}
@@ -433,7 +433,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 }
 											 }
 										 }
-										 else if(counterfeld[c][d] == 1) {
+										 else if(counterfeld[c][d] == 1 || counterfeld[c][d] == 0) {
 											 gewinncounter=0;
 										 }
 									}
@@ -465,7 +465,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 												 }
 											 }
 										 }
-										 else if(counterfeld[c][d] == 1) {
+										 else if(counterfeld[c][d] == 1 || counterfeld[c][d] == 0) {
 											 gewinncounter=0;
 										 }
 									}
