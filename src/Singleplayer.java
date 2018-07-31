@@ -283,6 +283,10 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 							
 							int p = (int)(Math.random()*5);
 							
+							while(counter[p]==-1) {
+								p = (int)(Math.random()*5);
+							}
+							
 							 Spielfeld.feld[counter[p]][p].setIcon(new ImageIcon(URLGelbesFeld));;
 							 changer = 1;
 							 counterfeld[counter[p]][p] = 2;	 

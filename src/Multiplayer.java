@@ -20,7 +20,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 	public Multiplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
-    			Spielfeld.feld[i][j].addActionListener(this);	//hinzufügen der JButtons zu ActionListener, um diese ansprechen zu können
+    			Spielfeld.feld[i][j].addActionListener(this);	//hinzufügenn der JButtons zu ActionListener, um diese ansprechen zu können
     		}
     	}
 		
