@@ -14,7 +14,7 @@ public class Speichern {
 	public static boolean save(ArrayList<Spielerprofil> List) {
 		
 		// initialize outputstream out
-		ObjectOutputStream out;
+		ObjectOutputStream out = null;
 		
 		//try catch to catch different exceptions
 		try {
