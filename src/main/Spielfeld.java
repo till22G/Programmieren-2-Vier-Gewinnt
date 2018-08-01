@@ -9,8 +9,8 @@ static final long serialVersionUID = 1; //Version Nummer
 	private JMenuBar dieBar;			//obere Leiste 
 	private JTextField Spieler1;		//Textfelder fuer die Namen der Spieler
 	private JTextField Spieler2;
-	private JLabel Text1;				//Texte vor den Textfeldern
-	private JLabel Text2;
+	public static JLabel Text1;				//Texte vor den Textfeldern
+	public static JLabel Text2;
 	
 	public static JButton [][] feld = new JButton [6][7];	//Array fuer die Spielfelder vom Typ JButton
 	public static JMenuItem [] menufeld = new JMenuItem[5]; //Array fuer die MenueItems
@@ -70,6 +70,9 @@ static final long serialVersionUID = 1; //Version Nummer
     	add (Spieler2);
     	add (Text1);
     	add (Text2);
+    	
+    	Spieler1.setText(Startbildschirm.txt1);
+    	Spieler2.setText(Startbildschirm.txt2);
     	
     	//Hintergrundbild fuer die JButtons
     	for (int i=0;i<6;i++) {

@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -14,27 +15,35 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	    public JButton multiplayer;
 	    public JButton singleplayer;
 	    private static JFrame frame = new JFrame ("Startbildschirm");
+	    public JButton start;
+	    public static int a =0;
+	    public static String txt1;
+	    public static String txt2;
 
 	    public Startbildschirm() {
 	    	
 	        //Buttons erstellen
 	        multiplayer = new JButton ("Multiplayer");
 	        singleplayer = new JButton ("Singleplayer");
+	        start = new JButton ("<html>Spieler<br>erstellen</html>");
 
 	        //adjust size and set layout
-	        setPreferredSize (new Dimension (300, 200));
+	        setPreferredSize (new Dimension (300, 260));
 	        setLayout (null);
 
 	        //hinzufuegen der Buttons
 	        add (multiplayer);
 	        add (singleplayer);
+	        add(start);
 
 	        //Groesse und Position der >Buttons
-	        multiplayer.setBounds (150, 0, 150, 200);
-	        singleplayer.setBounds (0, 0, 150, 200);
+	        multiplayer.setBounds (150, 60, 150, 200);
+	        singleplayer.setBounds (0, 60, 150, 200);
+	        start.setBounds(100, 10, 100, 40);
 	        
 	        multiplayer.addActionListener(this);
 	    	singleplayer.addActionListener(this);
+	    	start.addActionListener(this);
 	    }
 
 
@@ -49,13 +58,37 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	
 	    
 	    public void actionPerformed (ActionEvent e){
+	    	if(e.getSource()==start) {					//2 Spieler erstellen für den Anfang
+	    		if(a<2) {
+	    			a++;
+						 if(a==1) {
+							String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Spieler1");
+						 	txt1=eingabe;
+						 }
+						 else {
+							 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Spieler2");
+							 txt2=eingabe;
+						 }
+	    		}
+	    		else {}
+	    	}
 	    	if(e.getSource()==multiplayer) {
+	    		if(a==2) {							//erst ausführen, wenn 2 Spieler erstellt
 	    		frame.dispose();
 	    		Multiplayer.main(null);
+	    		}
+	    		else {
+	    			JOptionPane.showMessageDialog(null, "Bitte 2 Spieler anlegen", "Achtung", JOptionPane.INFORMATION_MESSAGE);
+	    		}
 	    	}
 	    	if(e.getSource()==singleplayer) {
+	    		if(a==2) {
 	    		frame.dispose();
 	    		Singleplayer.main(null);
+	    		}
+	    		else {
+	    			JOptionPane.showMessageDialog(null, "Bitte 2 Spieler anlegen", "Achtung", JOptionPane.INFORMATION_MESSAGE);
+	    		}
 	    	}
 	    }
 	
