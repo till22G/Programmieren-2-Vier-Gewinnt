@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+import interfaces.ISpeichern;
 import main.Spielerprofil;;
 
-public class Speichern {
+public class Speichern implements ISpeichern {
 		
 			
 	//Spielerprofil  wir methode übergeben damit um dann im Spielerprofil file abgelegt zu werden
