@@ -31,6 +31,7 @@ public class Speichern {
 			e.printStackTrace();
 			//if exception is thrown return false
 			return false;
+			
 		}
 	}
 }
