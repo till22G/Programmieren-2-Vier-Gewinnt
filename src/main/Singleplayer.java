@@ -39,6 +39,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
         frame2.setVisible (true);									//anzeigen
         frame2.setResizable(false);
         Singleplayer vierGewinnt = new Singleplayer();
+        
 	}
 	
 	 public void actionPerformed (ActionEvent e){	

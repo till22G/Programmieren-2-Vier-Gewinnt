@@ -1,8 +1,11 @@
 package main;
-import java.awt.*;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
-import javax.swing.*;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 
 public class Startbildschirm extends JPanel implements ActionListener {	//Standard Panel
 
@@ -41,6 +44,7 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	        frame.pack();
 	        frame.setResizable(false);
 	        frame.setVisible (true);
+	  	
 	    }
 	
 	    
