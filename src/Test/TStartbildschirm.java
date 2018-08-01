@@ -11,7 +11,7 @@ public class TStartbildschirm {
 		fail("Not yet implemented");
 	}
 	public void test_actionPerformed() {
-		
+	
 	}
 	
 	
