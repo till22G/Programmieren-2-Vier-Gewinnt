@@ -27,7 +27,7 @@ public class Speichern {
 		} 
 		catch (IOException e) {
 			//exception message if IOException occurs
-			System.out.println("wrinting Spielerprofiel back failed");
+			System.out.println("wrinting back Spielerprofiel failed");
 			e.printStackTrace();
 			//if exception is thrown return false
 			return false;
