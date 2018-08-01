@@ -23,10 +23,10 @@ public class SpeichernTest {
 		
 		Speichern.save(L);
 		
-		ArrayList<Spielerprofil> Listööö = Laden.LoadProfiles();
+		ArrayList<Spielerprofil> List = Laden.LoadProfiles();
 		
-		for(int i = 0; i < Listööö.size(); i++) {
-			System.out.println(Listööö.get(i).getName());
+		for(int i = 0; i < List.size(); i++) {
+			System.out.println(List.get(i).getName());
 		}
 		
 	}
