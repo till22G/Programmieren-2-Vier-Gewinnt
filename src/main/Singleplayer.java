@@ -6,14 +6,14 @@ import java.awt.event.ActionListener;
 
 public class Singleplayer implements ActionListener {		//implementieren, um Aktionen per Mausklick festzulegen
 	
-	public static int [] counter = {5,5,5,5,5,5,5};		//Zähler für jede Spalte
-	public int changer =1;								//flag für Spielerwechsel
-	public int vorbei = 0;								//flag für Spielende nur für KI, damit kein Stein mehr erstellt wird bei Neustart
-	public int [][] counterfeld = new int [6][7];		//Zähler der Spielsteine 1 für rot, 2 für gelb
-	public int gewinncounter = 0;						//Zähler für Steine in Reihe
-	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kästchen
+	public static int [] counter = {5,5,5,5,5,5,5};		//Zaehler fuer jede Spalte
+	public int changer =1;								//flag fuer Spielerwechsel
+	public int vorbei = 0;								//flag fuer Spielende nur fuer KI, damit kein Stein mehr erstellt wird bei Neustart
+	public int [][] counterfeld = new int [6][7];		//Zaehler der Spielsteine 1 fuer rot, 2 fuer gelb
+	public int gewinncounter = 0;						//Zaehler fuer Steine in Reihe
+	private static JFrame frame2 = new JFrame ("4 Gewinnt");		//erstellen des Windows Kaestchen
 	
-	//Strings für Bilder
+	//Strings fï¿½r Bilder
 	String URLLeeresFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/LeeresFeld.png";
 	String URLGelbesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/GelbesFeld.png";
 	String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
@@ -23,17 +23,17 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 	public Singleplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
-    			Spielfeld.feld[i][j].addActionListener(this);	//hinzufügen der JButtons zu ActionListener, um diese ansprechen zu können
+    			Spielfeld.feld[i][j].addActionListener(this);	//hinzufuegen der JButtons zu ActionListener, um diese ansprechen zu koennen
     		}
     	}
 		
 		for(int s=0;s<5;s++) {									
-			Spielfeld.menufeld[s].addActionListener(this);		//hinzufügen der JMenuItems zu ActionListener, um diese ansprechen zu können
+			Spielfeld.menufeld[s].addActionListener(this);		//hinzufuegen der JMenuItems zu ActionListener, um diese ansprechen zu koennen
 		}
 	}
 	
 	public static void main (String[] args) {
-        frame2.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);		//wenn x gedrückt Spiel beenden
+        frame2.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);		//wenn x gedrueckt Spiel beenden
         frame2.getContentPane().add (new Spielfeld());				//erstellen des Spielfeldes
         frame2.pack();
         frame2.setVisible (true);									//anzeigen
@@ -43,7 +43,7 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 	}
 	
 	 public void actionPerformed (ActionEvent e){	
-		 if(e.getSource()==Spielfeld.menufeld[0]) {			//für JMenuItem "Neu"
+		 if(e.getSource()==Spielfeld.menufeld[0]) {			//fuer JMenuItem "Neu"
 			 gewinncounter=0;
 			 changer=1;
 			 for (int x=0;x<6;x++) {
@@ -57,31 +57,31 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 			 }
 		 }
 		 
-		 if(e.getSource()==Spielfeld.menufeld[1]) {			//für JMenuItem "Exit"
+		 if(e.getSource()==Spielfeld.menufeld[1]) {			//fuer JMenuItem "Exit"
 			 System.exit(0);
 		 }
 		 
-		 if(e.getSource()==Spielfeld.menufeld[2]) {			//für JMenuItem "Singleplayer"
+		 if(e.getSource()==Spielfeld.menufeld[2]) {			//fuer JMenuItem "Singleplayer"
 			 frame2.dispose();
 			 Singleplayer.main(null);
 		 }
 		 
-		 if(e.getSource()==Spielfeld.menufeld[3]) {			//für JMenuItem "Multiplayer"
+		 if(e.getSource()==Spielfeld.menufeld[3]) {			//fuer JMenuItem "Multiplayer"
 			 frame2.dispose();
 			 Multiplayer.main(null);
 		 }
-		 if(e.getSource()==Spielfeld.menufeld[4]) {			//für JMenuItem "Spielerprofile"
+		 if(e.getSource()==Spielfeld.menufeld[4]) {			//fuer JMenuItem "Spielerprofile"
 			 SpielerprofilLayout.main(null);
 		 }
 		 
-		 for(int i=0;i<7;i++) {										//wenn JButton gedrückt, ändere counter
-			 for(int j=0;j<6;j++) {									//wenn JButton gedrückt, ändere Image
-				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedrückt, ändere changer
+		 for(int i=0;i<7;i++) {										//wenn JButton gedrueckt, aendere counter
+			 for(int j=0;j<6;j++) {									//wenn JButton gedrueckt, aendere Image
+				 if(e.getSource() == Spielfeld.feld[j][i]){			//wenn JButton gedrueckt, aendere changer
 					 if (counter[i]>-1) {
 						 
 							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLRotesFeld));
 							 changer = 2;
-							 counterfeld[counter[i]][i] = 1;		//wird zum überprüfen gesetzt
+							 counterfeld[counter[i]][i] = 1;		//wird zum ueberpruefen gesetzt
 							 counter[i]--;
 							 
 							 for(int a=0;a<6;a++) {								//horizontal
@@ -523,9 +523,9 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 							}
 						 
 					 }
-					 else {																	//wenn counter <0, gib aus "nicht möglich"
-					 System.out.println("Nicht möglich");
-					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht möglich");
+					 else {																	//wenn counter <0, gib aus "nicht mï¿½glich"
+					 System.out.println("Nicht mï¿½glich");
+					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht mï¿½glich");
 					 }
 		 
 				 }
