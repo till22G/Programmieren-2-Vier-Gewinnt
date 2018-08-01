@@ -272,7 +272,42 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 									 }
 								}
 							}
+							
+							if(counter[0] == -1 && counter[1] == -1 && counter[2] == -1 && counter[3] == -1 && counter[4] == -1 && counter[5] == -1 && counter[6] == -1) {
+								
+							}
 							 
+							for(int v =0, t=0;v<7;v++) {				//unentschieden??
+								if (counter[v]==-1) {
+									t++;
+									if(t==7) {
+										
+										System.out.println("vorbei");
+										 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Unentschieden", JOptionPane.YES_NO_OPTION);
+										 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
+											 System.exit(0);
+										 }
+										 else if (result==JOptionPane.YES_OPTION) {
+											 gewinncounter=0;
+											 changer=1;
+											 for (int x=0;x<6;x++) {
+										    		for(int y=0;y<7;y++) {
+										    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
+										    			counterfeld[x][y]=0;
+										    		}
+										    	}
+											 for(int m=0;m<7;m++) {
+												 counter[m]=5;
+											 }
+										 }
+									}
+								}
+								
+								else {
+									t=0;
+								}
+							}
+							
 						 }
 						 else {
 							 Spielfeld.feld[counter[i]][i].setIcon(new ImageIcon(URLGelbesFeld));;
@@ -483,6 +518,37 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 				 }
 			 }
 		 }
+		 
+			for(int v =0, t=0;v<7;v++) {				//unentschieden??
+				if (counter[v]==-1) {
+					t++;
+					if(t==7) {
+						
+						System.out.println("vorbei");
+						 int result = JOptionPane.showConfirmDialog(null, "Nochmal?", "Unentschieden", JOptionPane.YES_NO_OPTION);
+						 if(result==JOptionPane.NO_OPTION || result==JOptionPane.CLOSED_OPTION) {
+							 System.exit(0);
+						 }
+						 else if (result==JOptionPane.YES_OPTION) {
+							 gewinncounter=0;
+							 changer=1;
+							 for (int x=0;x<6;x++) {
+						    		for(int y=0;y<7;y++) {
+						    			Spielfeld.feld[x][y].setIcon(new ImageIcon(URLLeeresFeld));
+						    			counterfeld[x][y]=0;
+						    		}
+						    	}
+							 for(int m=0;m<7;m++) {
+								 counter[m]=5;
+							 }
+						 }
+					}
+				}
+				
+				else {
+					t=0;
+				}
+			}
 	 }
 	 
 	 
