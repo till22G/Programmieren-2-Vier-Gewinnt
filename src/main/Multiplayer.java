@@ -511,7 +511,7 @@ public class Multiplayer implements ActionListener {		//implementieren, um Aktio
 						 
 					 }
 					 else {																	//wenn counter <0, gib aus "nicht moeglich"
-					 System.out.println("Nicht m�glich");
+					 System.out.println("Nicht moeglich");
 					 JOptionPane.showMessageDialog(null, "Dieser Zug ist nicht m�glich");
 					 }
 		 

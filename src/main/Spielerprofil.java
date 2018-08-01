@@ -1,6 +1,8 @@
 package main;
 
-public class Spielerprofil {
+import java.io.Serializable;
+
+public class Spielerprofil implements Serializable {
 
 	public String name;
 	public int anzahlSpiele;

@@ -53,7 +53,6 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	        frame.pack();
 	        frame.setResizable(false);
 	        frame.setVisible (true);
-	  	
 	    }
 	
 	    

@@ -2,8 +2,12 @@ package main;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+
+import speichern_laden.Laden;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SpielerprofilLayout extends JPanel implements ActionListener {
 	
@@ -16,12 +20,28 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
     private JButton adden = new JButton("Hinzufügen");	//add Button
     private JButton removen = new JButton("Entfernen");	//remove Button
     public int counter = 1;
+<<<<<<< HEAD
     public static Spielerprofil [] profile = new Spielerprofil[10];		//Array der Spielerprofile
+=======
+    // ArrayList anstatt profile
+    public static ArrayList<Spielerprofil> Spielerliste;
+    public static Spielerprofil [] profile = new Spielerprofil[10];
+    
+    
+>>>>>>> branch 'master' of https://github.com/till22G/Programmieren-2-Vier-Gewinnt.git
     public static JFrame hauptframe = new JFrame ("Spielerprofile");
 
     public SpielerprofilLayout() {
+<<<<<<< HEAD
         
     	spielername [0] = new JLabel ("Name");			//erste Zeile des Layouts
+=======
+    	
+    	Spielerliste = Laden.LoadProfiles();
+    	profile = Spielerliste.toArray(profile);
+    	
+    	spielername [0] = new JLabel ("Name");
+>>>>>>> branch 'master' of https://github.com/till22G/Programmieren-2-Vier-Gewinnt.git
         spiele [0] = new JLabel ("Anzahl Spiele");
         gSpiele [0] = new JLabel ("Gewonnene Spiele");
         vSpiele [0] = new JLabel ("Verlorene Spiele");
@@ -80,7 +100,11 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 
     public void actionPerformed (ActionEvent e){	//wenn adden gedrückt
 		 if(e.getSource()==adden) {
+<<<<<<< HEAD
 			 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Namen eingeben");	//Namen eingeben in Fenster
+=======
+			 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Namen eingeben");		 
+>>>>>>> branch 'master' of https://github.com/till22G/Programmieren-2-Vier-Gewinnt.git
 			 for(counter=1;counter<10;counter++) {
 				if(profile[counter] == null) {
 					 profile[counter] = new Spielerprofil(eingabe,0,0,0);
