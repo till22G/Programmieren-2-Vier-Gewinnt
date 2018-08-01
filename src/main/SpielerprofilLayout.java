@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SpielerprofilLayout extends JPanel implements ActionListener {
 	
@@ -16,7 +17,13 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
     private JButton adden = new JButton("Hinzufügen");
     private JButton removen = new JButton("Entfernen");
     public int counter = 1;
+    
+    // ArrayList anstatt profile
+    public static ArrayList<Spielerprofil> Spielerliste = new ArrayList<>();
+    
     public static Spielerprofil [] profile = new Spielerprofil[10];
+    
+    
     public static JFrame hauptframe = new JFrame ("Spielerprofile");
 
     public SpielerprofilLayout() {
@@ -66,7 +73,7 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 
     public void actionPerformed (ActionEvent e){	
 		 if(e.getSource()==adden) {
-			 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Namen eingeben");
+			 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Namen eingeben");		 
 			 for(counter=1;counter<10;counter++) {
 				if(profile[counter] == null) {
 					 profile[counter] = new Spielerprofil(eingabe,0,0,0);

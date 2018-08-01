@@ -10,7 +10,21 @@ import main.Spielerprofil;;
 
 public class Speichern implements ISpeichern {
 		
+	
+	public static void saveProfile(Spielerprofil Profil) {
+		
+		//get the list of all playerprofiles
+		ArrayList<Spielerprofil> List = Laden.LoadProfiles();
+		
+		//add the Profile to the List
+		List.add(Profil);
+		
+		//save the list with method save
+		save(List);
+		
+	}
 			
+	
 	//Spielerprofil  wir methode übergeben damit um dann im Spielerprofil file abgelegt zu werden
 	public static boolean save(ArrayList<Spielerprofil> List) {
 		
