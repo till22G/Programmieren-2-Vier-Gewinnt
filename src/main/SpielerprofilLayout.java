@@ -2,6 +2,9 @@ package main;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+
+import speichern_laden.Laden;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -17,17 +20,18 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
     private JButton adden = new JButton("Hinzufügen");
     private JButton removen = new JButton("Entfernen");
     public int counter = 1;
-    
     // ArrayList anstatt profile
-    public static ArrayList<Spielerprofil> Spielerliste = new ArrayList<>();
-    
+    public static ArrayList<Spielerprofil> Spielerliste;
     public static Spielerprofil [] profile = new Spielerprofil[10];
     
     
     public static JFrame hauptframe = new JFrame ("Spielerprofile");
 
     public SpielerprofilLayout() {
-        
+    	
+    	Spielerliste = Laden.LoadProfiles();
+    	profile = Spielerliste.toArray(profile);
+    	
     	spielername [0] = new JLabel ("Name");
         spiele [0] = new JLabel ("Anzahl Spiele");
         gSpiele [0] = new JLabel ("Gewonnene Spiele");

@@ -19,7 +19,6 @@ public class Singleplayer implements ActionListener {		//implementieren, um Akti
 	String URLRotesFeld = "../Programmieren-2-Vier-Gewinnt/src/Bilder/RotesFeld.png";
 	
 	
-	
 	public Singleplayer (){									
 		for (int i=0;i<6;i++) {
     		for(int j=0;j<7;j++) {
