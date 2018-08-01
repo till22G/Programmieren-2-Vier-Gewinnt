@@ -5,9 +5,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
+import interfaces.ILaden;
 import main.Spielerprofil;
 
-public class Laden {
+public class Laden implements ILaden {
 	
 	//load profiles and return ArrayList
 	public static ArrayList<Spielerprofil> LoadProfiles() {
