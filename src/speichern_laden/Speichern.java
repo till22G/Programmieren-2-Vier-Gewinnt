@@ -7,8 +7,9 @@ import java.io.ObjectOutputStream;
 import main.Spielerprofil;;
 
 public class Speichern {
-	
-	//Spielerprofil  wir methode übergeben damit um dann im Spielerprofil file abbgelegt zu werden
+		
+			
+	//Spielerprofil  wir methode übergeben damit um dann im Spielerprofil file abgelegt zu werden
 	public static boolean save(Spielerprofil Spieler) {
 		
 		// initialize outputstream out
@@ -17,7 +18,7 @@ public class Speichern {
 		//try catch to catch different exceptions
 		try {
 			//new stream in .txt data
-			out = new ObjectOutputStream(new FileOutputStream("../Spielerprofile/Spielerprofile.txt"));
+			out = new ObjectOutputStream(new FileOutputStream("../Programmieren-2-Vier-Gewinnt/src/Spielerprofile/Spielerprofile.txt"));
 			//write Spielerprofil to Spielerprofile.txt
 			out.writeObject(Spieler);
 			//close out
@@ -27,7 +28,7 @@ public class Speichern {
 		} 
 		catch (IOException e) {
 			//exception message if IOException occurs
-			System.out.println("wrinting back Spielerprofiel failed");
+			System.out.println("writing back Spielerprofiel failed");
 			e.printStackTrace();
 			//if exception is thrown return false
 			return false;
