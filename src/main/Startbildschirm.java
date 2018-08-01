@@ -2,15 +2,10 @@ package main;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileInputStream;
-import java.io.InputStream;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
 
 public class Startbildschirm extends JPanel implements ActionListener {	//Standard Panel
 
@@ -43,23 +38,12 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 	    }
 
 
-	    public static void main (String[] args)throws Exception {
+	    public static void main (String[] args) {
 	        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 	        frame.getContentPane().add (new Startbildschirm());
 	        frame.pack();
 	        frame.setResizable(false);
 	        frame.setVisible (true);
-
-		    // open the sound file as a Java input stream
-		    String gongFile = "../Programmieren-2-Vier-Gewinnt/src/Bilder/NyanCat.wav"; 
-		    InputStream in = new FileInputStream(gongFile);
-
-		    // create an audiostream from the inputstream
-		    AudioStream audioStream = new AudioStream(in);
-
-		    // play the audio clip with the audioplayer class
-		    AudioPlayer.player.start(audioStream);
-	  			  
 	  	
 	    }
 	
