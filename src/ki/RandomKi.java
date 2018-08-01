@@ -1,5 +1,7 @@
 package ki;
 
+import java.util.concurrent.TimeUnit;
+
 public class RandomKi {
 	
 	//test array => later Spielfeld
@@ -11,11 +13,11 @@ public class RandomKi {
 		//boolean: true if a token(2) was set, false if not
 		boolean varSet = false;
 		
-		//counter to go up the pile of tokens
-		int counter = 0;
-		
 		//try as long as no value is set
 		while(varSet == false) {
+			
+			//counter to go up the pile of tokens
+			int counter = 0;
 			
 			//random value between 0 and 6
 			//if no token got set in this column try a different random number
@@ -33,6 +35,8 @@ public class RandomKi {
 			else counter ++;
 			}
 		}
+		
+		
 		return field;
 	}
 	

@@ -1,3 +1,4 @@
+package main;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -12,18 +13,18 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
     private JLabel [] spiele = new JLabel [11];
     private JLabel [] gSpiele = new JLabel [11];
     private JLabel [] vSpiele = new JLabel [11];
-    private JButton adden = new JButton("Add");
-    private JButton removen = new JButton("Delete");
+    private JButton adden = new JButton("Hinzufügen");
+    private JButton removen = new JButton("Entfernen");
     public int counter = 1;
     public static Spielerprofil [] profile = new Spielerprofil[10];
-    public static JFrame hauptframe = new JFrame ("Players");
+    public static JFrame hauptframe = new JFrame ("Spielerprofile");
 
     public SpielerprofilLayout() {
         
     	spielername [0] = new JLabel ("Name");
-        spiele [0] = new JLabel ("Played Games");
-        gSpiele [0] = new JLabel ("Won");
-        vSpiele [0] = new JLabel ("Lost");
+        spiele [0] = new JLabel ("Anzahl Spiele");
+        gSpiele [0] = new JLabel ("Gewonnene Spiele");
+        vSpiele [0] = new JLabel ("Verlorene Spiele");
     	
     	for(int i=1;i<11;i++) {
         spielername [i] = new JLabel ("0");
@@ -65,7 +66,7 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 
     public void actionPerformed (ActionEvent e){	
 		 if(e.getSource()==adden) {
-			 String eingabe = JOptionPane.showInputDialog("new player", "insert name");
+			 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Namen eingeben");
 			 for(counter=1;counter<10;counter++) {
 				if(profile[counter] == null) {
 					 profile[counter] = new Spielerprofil(eingabe,0,0,0);
@@ -80,7 +81,7 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 		             break;
 				}
 				else if (counter==9) {
-					 JOptionPane.showMessageDialog(null, "maximum ammount of players reached, delete one", "Attention", JOptionPane.INFORMATION_MESSAGE);
+					 JOptionPane.showMessageDialog(null, "Spielerprofile sind voll! Bitte zuerst ein Spielerprofil löschen", "Achtung", JOptionPane.INFORMATION_MESSAGE);
 				}
 				else {
 					
@@ -91,9 +92,9 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 		 if(e.getSource()==removen) {
 			 counter--;
 			 try {
-			 int eingabe = Integer.parseInt(JOptionPane.showInputDialog("delete player", "insert number"));
+			 int eingabe = Integer.parseInt(JOptionPane.showInputDialog("Spieler löschen", "Nummer eingeben"));
 			 if (eingabe < 1|| eingabe > 9) {
-				 JOptionPane.showMessageDialog(null, "Please insert a number between 1-10!", "Error", JOptionPane.INFORMATION_MESSAGE);
+				 JOptionPane.showMessageDialog(null, "Bitte eine Nummer von 1-10 eingeben!", "Fehler", JOptionPane.INFORMATION_MESSAGE);
 			 }
 			 else {
 				 profile[eingabe] = null;
@@ -107,8 +108,8 @@ public class SpielerprofilLayout extends JPanel implements ActionListener {
 			 	}
 			 }
 			 catch (NumberFormatException a) {
-				 ImageIcon icon = new ImageIcon("../Programmieren-2-Vier-Gewinnt/src/Bilder/facepalm.jpg"); 
-				 JOptionPane.showMessageDialog(null, "Please insert a number!", "Error", JOptionPane.INFORMATION_MESSAGE, icon);
+				 ImageIcon icon = new ImageIcon("C:\\Users\\User\\Desktop\\facepalm.jpg"); 
+				 JOptionPane.showMessageDialog(null, "Bitte eine Nummer eingeben!", "Fehler", JOptionPane.INFORMATION_MESSAGE, icon);
              }
 		 	}
 		 }

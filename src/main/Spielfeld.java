@@ -1,3 +1,4 @@
+package main;
 import java.awt.*;
 import javax.swing.*;
 
@@ -34,7 +35,7 @@ static final long serialVersionUID = 1; //Version Nummer
         menufeld[2] = new JMenuItem ("Singleplayer");
         optionMenu.add (menufeld[2]);
         menufeld[3] = new JMenuItem ("Multiplayer");
-        optionMenu.add (menufeld[3]);
+        optionMenu.add (menufeld[2]);
         Spieler1 = new JTextField (10);
         Spieler2 = new JTextField (10);
         Text1 = new JLabel ("Player1:");
