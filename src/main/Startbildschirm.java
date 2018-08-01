@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import speichern_laden.Speichern;
+
 
 public class Startbildschirm extends JPanel implements ActionListener {	//Standard Panel
 
@@ -63,10 +65,12 @@ public class Startbildschirm extends JPanel implements ActionListener {	//Standa
 						 if(a==1) {
 							String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Spieler1");
 						 	txt1=eingabe;
+						 	Speichern.saveProfile(new Spielerprofil(eingabe));
 						 }
 						 else {
 							 String eingabe = JOptionPane.showInputDialog("Neuer Spieler", "Spieler2");
 							 txt2=eingabe;
+							 Speichern.saveProfile(new Spielerprofil(eingabe));
 						 }
 	    		}
 	    		else {}
